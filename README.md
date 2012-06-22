@@ -7,4 +7,4 @@
 
 <h2>Usage</h2>
 <p>Press <code>Ctrl+shift+p</code> or <code>cmd+shift+p</code> and write <i>Script</i>.
-Select <i>scriptSrc: Run</i>. Now select the desired scripttagand the compression type. The scripttag should now be in your clipboard
+Select <i>scriptSrc: Run</i>. Now select the desired script-tag and the compression type. The script-tag should now be in your clipboard
