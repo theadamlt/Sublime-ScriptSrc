@@ -1,6 +1,6 @@
 import sublime, sublime_plugin
 import commands
-import os
+import subprocess
 
 path = sublime.packages_path();
 
@@ -58,8 +58,7 @@ class scriptsrcCommand(sublime_plugin.WindowCommand, sublime.Window):
 				command = 'php -f '+path+'/scriptsrc.php '+lib+' '+comp
 				output = commands.getoutput(command)
 			else:
-				o_pipe = os.popen('C:\PHP5\php.exe -f '+path+'/scriptsrc.php '+lib+' '+comp)
-				output = o_pipe.read()
+				output = subprocess.Popen(["C:\PHP5\php.exe -f ", path+'/scriptsrc.php '+lib+' '+comp], stdout=PIPE).communicate()
 
 			if output == 'It seems like you dont have an internet connection':
 			 	sublime.error_message('Couldn\'t fetch the latest script tag. Please check your internet connection');
