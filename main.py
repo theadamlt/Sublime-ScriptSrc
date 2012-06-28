@@ -54,7 +54,7 @@ class scriptsrcCommand(sublime_plugin.WindowCommand, sublime.Window):
 				path = sublime.packages_path()+'/Sublime-ScriptSRC'
 
 
-			if sublime.platform() != 'win':
+			if sublime.platform() != 'windows':
 				command = 'php -f '+path+'/scriptsrc.php '+lib+' '+comp
 				output = commands.getoutput(command)
 			else:
@@ -69,5 +69,5 @@ class scriptsrcCommand(sublime_plugin.WindowCommand, sublime.Window):
 
 			# view = sublime.Window.active_view()
 			# edit = view.begin_edit()
-	  		#view.insert(edit, 0, output)
-	  		#view.end_edit(edit)
+	  		# view.insert(edit, 0, output)
+	  		# view.end_edit(edit)
